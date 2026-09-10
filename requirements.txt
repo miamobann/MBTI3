@@ -1,6 +1,3 @@
-pandas                      # 버전 명시 시 pandas=(버전). 버전은 안적어도 상관 없음
-streamlit               
-numpy                    
-os                      # 외부파일 반입출용 ex) csv 등
-matplotlib
+streamlit
 plotly
+pandas
