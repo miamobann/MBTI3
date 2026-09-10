@@ -7,8 +7,11 @@ import os
 import sys
 from typing import Dict, Any, List, Tuple
 
-# 상대 경로 임포트 보장
-sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+# Streamlit.io 클라우드 배포 시 다른 폴더와의 모듈명 충돌 및 임포트 에러 방지 (최우선 경로 지정)
+current_dir = os.path.dirname(os.path.abspath(__file__))
+if current_dir not in sys.path:
+    sys.path.insert(0, current_dir)
+
 from questions import QUESTIONS, JOB_PROFILES
 
 
